@@ -4,7 +4,8 @@ jobs:
   push-to-github-pages:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Upload to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2
         with:
