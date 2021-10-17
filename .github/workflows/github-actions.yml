@@ -18,5 +18,6 @@ jobs:
           build_dir: public/
           jekyll: false
           verbose: true
+          fqdn: m3rlin.net
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
