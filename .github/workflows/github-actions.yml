@@ -6,12 +6,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Copy Files
+        run: |
+          mkdir public
+          cp -v -t public img/ css/ index.html
       - name: Upload to GitHub Pages
         if: success() && github.ref == 'refs/heads/master'
         uses: crazy-max/ghaction-github-pages@v2
         with:
           target_branch: gh-pages
-          build_dir: ./
+          build_dir: public/
           jekyll: false
           verbose: true
         env:
