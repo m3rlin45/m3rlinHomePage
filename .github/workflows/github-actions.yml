@@ -1,14 +1,10 @@
 name: Push To GitHub Pages On Land to master
-on:
-  push:
-    branches:
-      - main
+on: [push]
 jobs:
   push-to-github-pages:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
       - name: Upload to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2
         with:
