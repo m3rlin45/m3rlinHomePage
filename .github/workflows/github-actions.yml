@@ -1,0 +1,18 @@
+name: Push To GitHub Pages On Land to master
+on:
+  push:
+    branches:
+      - main
+jobs:
+  push-to-github-pages:
+  steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Upload to GitHub Pages
+      uses: crazy-max/ghaction-github-pages@v2
+      with:
+        target_branch: gh-pages
+        build_dir: ./
+        jekyll: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
