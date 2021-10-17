@@ -9,7 +9,7 @@ jobs:
       - name: Copy Files
         run: |
           mkdir public
-          cp -v -t public img/ css/ index.html
+          cp -vr -t public img/ css/ index.html
       - name: Upload to GitHub Pages
         if: success() && github.ref == 'refs/heads/master'
         uses: crazy-max/ghaction-github-pages@v2
