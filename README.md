@@ -1,2 +1,2 @@
 # Christpher Dewan's Home Page
-A simple static homepage hosted at [http://m3rlin.net/](http://m3rlin.net/)
+A simple static homepage hosted at on GitHub Pages at [https://m3rlin.net/](https://m3rlin.net/)
